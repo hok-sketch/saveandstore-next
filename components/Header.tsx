@@ -6,12 +6,21 @@ import { t, locales, type Locale } from '@/lib/i18n';
 const flagBy: Record<Locale, string> = {
   hy: '🇦🇲',
   ru: '🇷🇺',
+<<<<<<< HEAD
   en: '🇬🇧',
 };
 const labelBy: Record<Locale, string> = {
   hy: 'ARM',
   ru: 'RU',
   en: 'EN',
+=======
+  en: '🇬🇧'
+};
+const labelBy: Record<Locale, string> = {
+  hy: 'HY',
+  ru: 'RU',
+  en: 'EN'
+>>>>>>> 9a8b585 (chore: netlify SSR config and Next plugin)
 };
 
 export default function Header({ locale }: { locale: Locale }) {
