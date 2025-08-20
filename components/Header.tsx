@@ -15,7 +15,7 @@ export default function Header({ locale }: { locale: Locale }){
         <div className="lang" role="group" aria-label="Language">
           {locales.map(l => (
             <Link key={l} href={`/${l}`}>
-              <button aria-pressed={l===locale}><span aria-hidden>🌐</span> {l.upper()}</button>
+ <button aria-pressed={l===locale}><span aria-hidden>🌐</span> {l.toUpperCase()}</button>
             </Link>
           ))}
         </div>
