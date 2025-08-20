@@ -15,7 +15,11 @@ export default function Header({ locale }: { locale: Locale }){
         <div className="lang" role="group" aria-label="Language">
           {locales.map(l => (
             <Link key={l} href={`/${l}`}>
+<<<<<<< HEAD
  <button aria-pressed={l===locale}><span aria-hidden>🌐</span> {l.toUpperCase()}</button>
+=======
+              <button aria-pressed={l===locale}><span aria-hidden>🌐</span> {l.toUpperCase()}</button>
+>>>>>>> 23af227 (feat: initial SaveAndStore Next.js project)
             </Link>
           ))}
         </div>

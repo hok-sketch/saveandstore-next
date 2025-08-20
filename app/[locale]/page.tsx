@@ -1,13 +1,13 @@
 'use client';
-import { t, type Locale } from '@/lib/i18n';
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import Datacenter from '@/components/Datacenter';
-import Testimonials from '@/components/Testimonials';
-import Pricing from '@/components/Pricing';
-import Calculator from '@/components/Calculator';
-import Contacts from '@/components/Contacts';
-import Footer from '@/components/Footer';
+import { t, type Locale } from '../../lib/i18n';
+import Header from '../../components/Header';
+import Hero from '../../components/Hero';
+import Datacenter from '../../components/Datacenter';
+import Testimonials from '../../components/Testimonials';
+import Pricing from '../../components/Pricing';
+import Calculator from '../../components/Calculator';
+import Contacts from '../../components/Contacts';
+import Footer from '../../components/Footer';
 import { useParams } from 'next/navigation';
 
 export default function Page() {
