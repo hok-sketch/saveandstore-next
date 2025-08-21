@@ -1,18 +1,27 @@
-'use client';
-import { t, type Locale } from '@/lib/i18n';
+import type { Metadata } from 'next';
+import './globals.css';
+import Header from '@/components/Header';
+import { locales, defaultLocale, type Locale } from '@/lib/i18n';
 
-export default function Datacenter({ locale }: { locale: Locale }){
+export const metadata: Metadata = {
+  title: 'SaveAndStore — Servers in Yerevan',
+  description: 'SaveAndStore: servers and IT services in Armenia',
+};
+
+export default function RootLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { locale: Locale };
+}) {
+  const locale = locales.includes(params.locale) ? params.locale : defaultLocale;
   return (
-    <section className="section dc">
-      <div className="container">
-        <h2 style={{fontSize:'var(--fs-h2)', marginBottom:12}}>{t(locale,'dc_title')}</h2>
-        <div className="grid">
-          <div><ul><li>{t(locale,'dc_1')}</li></ul></div>
-          <div><ul><li>{t(locale,'dc_2')}</li></ul></div>
-          <div><ul><li>{t(locale,'dc_3')}</li></ul></div>
-          <div><ul><li>{t(locale,'dc_4')}</li></ul></div>
-        </div>
-      </div>
-    </section>
+    <html lang={locale}>
+      <body>
+        <Header locale={locale} />
+        {children}
+      </body>
+    </html>
   );
 }
